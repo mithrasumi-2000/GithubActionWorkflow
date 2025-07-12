@@ -1,0 +1,16 @@
+name: Run Shell Script Every Minute
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Every minute
+  workflow_dispatch:        # Optional: allows manual run
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run custom shell script
+        run: bash scripts/my-script.sh
