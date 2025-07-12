@@ -2,7 +2,7 @@ name: Run Shell Script Every Minute
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Every minute
+    #- cron: '*/1 * * * *'  # Every minute
   workflow_dispatch:        # Optional: allows manual run
 
 jobs:
